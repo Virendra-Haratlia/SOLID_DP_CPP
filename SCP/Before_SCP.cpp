@@ -11,7 +11,6 @@ class Rectangle :public Shape
 public:
     void draw() override{ std::cout << "Rectangle::draw"<<std::endl; };
 };
-#include <iostream>
 
 int main()
 {
