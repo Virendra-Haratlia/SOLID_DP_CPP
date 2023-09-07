@@ -2,7 +2,7 @@
 In software development, Object-Oriented Design plays a crucial role when it comes to writing flexible, scalable, maintainable, and reusable code. There are so many benefits of using OOD but every developer should also have the knowledge of the SOLID principle for good object-oriented design in programming. The SOLID principle was introduced by Robert C. Martin, also known as Uncle Bob and it is a coding standard in programming. This principle is an acronym of the five principles which is given below…
 
 * <strong>S</strong>ingle Responsibility Principle (SRP)
-* <strong>O</strong>pen/Closed Principle
+* <strong>O</strong>pen/Closed Principle(OCP)
 * <strong>L</strong>iskov’s Substitution Principle (LSP)
 * <strong>I</strong>nterface Segregation Principle (ISP)
 * <strong>D</strong>ependency Inversion Principle (DIP)
