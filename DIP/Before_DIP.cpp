@@ -6,7 +6,7 @@
 class Developer
 {
 public:
-    Developer(const std::string name) :m_name{ name } {}
+    Developer(const std::string& name) :m_name{ name } {}
     std::string GetName() { return m_name; }
 private:
     std::string m_name;
@@ -14,7 +14,7 @@ private:
 class Tester
 {
 public:
-    Tester(const std::string name) :m_name{ name } {}
+    Tester(const std::string& name) :m_name{ name } {}
     std::string GetName() { return m_name; }
 private:
     std::string m_name;
@@ -22,7 +22,7 @@ private:
 class Designer
 {
 public:
-    Designer(const std::string name) :m_name{ name } {}
+    Designer(const std::string& name) :m_name{ name } {}
     std::string GetName() { return m_name; }
 private:
     std::string m_name;
