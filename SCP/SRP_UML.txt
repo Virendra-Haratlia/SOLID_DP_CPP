@@ -1,0 +1,14 @@
+@startuml
+class DrawStrategy
+{
++ draw()
+}
+
+RectangleDrawStrategy --|> DrawStrategy
+class Shape
+{
++ draw()
+}
+Shape<|-- Rectangle
+Rectangle--> RectangleDrawStrategy
+@enduml
