@@ -2,33 +2,32 @@
 //
 #include <iostream>
 #include <memory>
-class Rectangle 
+
+class Apple
 {
 public:
-    virtual void setHeight(const unsigned int height) { m_Height = height; }
-    virtual void setWidth(const unsigned int width) { m_Width = width; }
-    unsigned int getHeight()const { return m_Height; }
-    unsigned int getWidth() const { return m_Width; }
-    virtual ~Rectangle() = default;
-protected:
-    unsigned int m_Height;
-    unsigned int m_Width;
+    virtual std::string GetColor() 
+    {
+        return "Red";
+    }
 };
-class Square :public Rectangle
+class Orange : public Apple
 {
 public:
-    void setHeight(const unsigned int height) override { m_Height = height; m_Width = height;}
-    void setWidth(const unsigned int width) override { m_Height = width; m_Width = width; }
+    std::string GetColor() override
+    {
+        return "Orange";
+    }
 };
-unsigned int CalculateArea(const std::shared_ptr<Rectangle> rect)  { return (rect->getHeight() * rect->getWidth()); }
+void showAppleColor(std::shared_ptr<Apple> apple)
+{
+    std::cout << "Apple Color is:" << apple->GetColor() << std::endl;
+}
 int main()
 {
-    std::shared_ptr<Rectangle> squr1 = std::make_shared<Square>();
-    squr1->setHeight(7);
-    squr1->setWidth(9);
-    CalculateArea(squr1);
+    std::shared_ptr<Apple> apple = std::make_shared<Orange>();
+    showAppleColor(apple);
 }
-
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
@@ -39,4 +38,3 @@ int main()
 //   4. Use the Error List window to view errors
 //   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
 //   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
-
