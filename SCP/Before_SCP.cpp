@@ -3,23 +3,20 @@
 class Shape
 {
 public:
-    virtual void OpenGLDraw() = 0;
-    virtual void VulkanDraw() = 0;
+    virtual void draw() = 0;
     virtual ~Shape() = default;
 };
 class Rectangle :public Shape
 {
 public:
-    void OpenGLDraw() override{ std::cout << "Rectangle::OpenGLDraw"<<std::endl; };
-    void VulkanDraw() override { std::cout << "Rectangle::VulkanDraw"<< std::endl; };
+    void draw() override{ std::cout << "Rectangle::draw"<<std::endl; };
 };
 #include <iostream>
 
 int main()
 {
     Rectangle rect;
-    rect.OpenGLDraw();
-    rect.VulkanDraw();
+    rect.draw();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
