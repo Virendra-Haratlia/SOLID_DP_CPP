@@ -55,6 +55,7 @@ int main()
     std::shared_ptr<Employee> designer2 = std::make_shared<Designer>("Designer-2", "Designer");
     manager->addEmployee(designer2);
     manager->PrintMangedResource();
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
